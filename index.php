@@ -3,11 +3,11 @@
 include 'setsu.php';
 
 require_once('function.php');
-session_start();
+/*session_start();
 
 if (!is_user()) {
   redirect('login.php');
-}
+}*/
 
 ?>
 
@@ -25,15 +25,6 @@ if (!is_user()) {
     <script type="text/javascript" src="js/jvs.js"></script>
     <link href="css/style_sp.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
     <link href="css/style_pad.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)">
-<!--<script>
-    $(function() {
-      $("li").click(function(e) {
-        e.preventDefault();
-        $("li").removeClass("active");
-        $(this).addClass("active");
-      });
-    });
-  </script>-->
 </head>
  
 <body>
