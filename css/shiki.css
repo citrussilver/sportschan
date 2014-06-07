@@ -1,0 +1,445 @@
+/*table#agntTable tr td:nth-child(2), table#subAgentTable tr td:nth-child(2) {
+    display: none;
+}*/
+/* ヘッダーメニュー */
+div.headMenu {
+   font-size:80%;
+   margin:10px 20px 10px 0px;
+   z-index:100;
+}
+
+div.headMenu ul {
+   margin:0;
+   padding:0;
+   display:block;
+}
+
+div.headMenu li {
+	float:left;
+	position:relative;
+    /*display:block;
+   list-style:none;*/
+}
+
+div.headMenu ul a {
+   float:left;
+   padding:5px 10px;/*tabサイズ*/
+   text-decoration:none;
+   color:#04B0C5;
+   background: #3E3D32;
+   /* Only round the top corners */
+		  -webkit-border-top-left-radius: 15px;
+		  -webkit-border-top-right-radius: 15px;
+		  -moz-border-radius-topleft: 15px;
+		  -moz-border-radius-topright: 15px;
+		  border-top-left-radius: 15px;
+		  border-top-right-radius: 15px;
+}
+
+div.headMenu .active {
+  /* Highest, active tab is on top */
+  z-index: 3;
+}
+
+div.headMenu .active a { 
+  /* Colors when tab is active */
+  background: #db6722;
+  color: black; 
+}
+
+div.headMenu li:before, div.headMenu li:after, 
+div.headMenu li a:before, div.headMenu li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+}
+
+div.headMenu li:last-child:after,   div.headMenu li:last-child a:after,
+div.headMenu li:first-child:before, div.headMenu li:first-child a:before,
+div.headMenu .active:after,   div.headMenu .active:before, 
+div.headMenu .active a:after, div.headMenu .active a:before {
+  content: "";
+}
+
+div.headMenu ul a:hover {
+   background-color: #db6722;
+}
+
+div.headMenu li:hover > ul {
+   display: block;
+}
+
+/*div.headMenu li:hover {
+   position:relative;
+}*/
+
+/* サブメニュー1段目 
+div.headMenu ul ul{
+   display:none;
+   position:absolute;
+   top:100%;
+   left:0;
+   z-index:1;
+}
+
+div.headMenu li li {
+   clear:both;
+   font-size:11px;
+   border-bottom:1px solid #f1f1f1;
+}
+
+div.headMenu ul ul a {
+   background-color: #333;
+   width:150px;
+}
+
+/* サブメニュー2段目以降 
+div.headMenu ul ul ul {
+   top:0;
+   left:100%;
+   z-index:1;
+}*/
+
+/*============================================
+全般的なスタイル
+============================================*/
+* {
+	margin:0; padding:0; 	/*全要素のマージン・パディングをリセット*/
+	line-height:1.5;	/*全要素の行の高さを1.5倍にする*/
+	/*color:#04B0C5;		/*文字色*/
+
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+body {
+	background-color:#000000;	/*ページ全体の背景色*/
+	text-align:center;		/*IE6以下でセンタリングするための対策*/
+	font-weight: normal;
+	line-height: 1.5;
+	font-family: "Hiragino Kaku Gothic Pro","Meiryo,","MS PGothic",sans-serif;
+}
+
+a:link {color:#04B0C5;} 
+
+a:visited, {
+	color: #04B0C5;
+}
+
+a:hover,
+a:active {
+	color: #db6722;
+}
+
+a:focus {
+	outline: none;
+}
+
+/*--HTML5-----------------------------------------------------------*/
+
+article,aside,details,footer,header,main,menu,nav,section,summary {
+	display: block;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+ul
+{
+	font-size: 150%
+}
+
+h4,input[type=submit],input[type=text],label,select,span {
+	font-size: 140%
+}
+
+h5,h5 a:link
+{
+	font-size: 120%;
+	color:#04B0C5
+}
+	#pagetop {
+	font-size: 140%;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+}
+
+}
+
+div#zentai {
+	width:90%; margin:0 auto;	/*内容全体をセンタリング*/
+	text-align:left;	/*テキストの配置を左揃えにする*/
+	/*background-repeat:repeat-y;		/*背景画像を縦方向に繰り返す
+	background-color:#3E3D32;		/*内容全体の背景色*/
+}
+
+/*============================================
+ヘッダ
+============================================*/
+div#kitagawa {
+	height:77px;	/*背景画像のサイズに合わせてボックスの高さを指定*/
+	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
+	background-color:#272822;		/*ヘッダ部分の背景色*/
+}
+h1 {
+	padding:20px 0px 0px 30px;		/*見出し内容の位置調整*/
+	font-family: "Hiragino Kaku Gothic Pro","Meiryo,","MS PGothic",sans-serif;	/*フォントの種類*/
+}
+h1 a {text-decoration:none;color:#04B0C5} 			/*リンクの下線を無くす*/
+
+/*============================================
+メインメニュー
+============================================*/
+ul#yokomenu {
+	height:42px; background-color:#3E3D32; font-weight:bold;
+}
+li#ymenu01,li#ymenu02,li#ymenu03,li#ymenu04,li#ymenu05 {
+	float:left;			/*リスト項目を横に並べる*/
+	display:inline;			/*リスト項目をインライン表示にする*/
+	list-style-type:none;		/*リストマーカー無しにする*/
+}
+
+/*ボタン01～05にはそれぞれ異なる背景画像を指定する*/
+li#ymenu01 {
+	width:164px; height:42px;	/*背景画像に合わせたサイズ指定*/
+}
+li#ymenu02 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/
+}
+li#ymenu03 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/	
+}
+li#ymenu04 {
+	width:156px; height:42px;	/*背景画像に合わせたサイズ指定*/
+}
+li#ymenu05 {
+	width:164px; height:42px;	/*背景画像に合わせたサイズ指定*/
+}
+ul#yokomenu a {
+	display:block;				/*リンクをブロック表示にする*/
+	height:42px; padding-top:4px; text-align:center;
+	text-decoration:none; 			/*リンクの下線を無くす*/
+	font-family:Arial, Helvetica, sans-serif;	/*フォントの種類*/
+}
+
+/*============================================
+サブメニュー（左カラム）
+============================================*/
+div#nishigawa {
+	width:160px;			/*幅の指定*/
+	margin:10px 10px 10px 25px;	/*位置調整（IE6のバグに注意）*/
+	display:inline;			/*IE6のマージン算出のバグ対策*/
+	float:left;			/*サブメニューのカラムを左寄せにする*/
+}
+
+/*サブメニューのヘッダ部分（余白調整・背景画像・背景色・文字サイズなど）*/
+div#nishigawa_h {
+	height:26px; padding:4px 0px 0px 0px;	
+	background-repeat:no-repeat; background-position:top;
+	background-color:#3E3D32;
+	font-size:90%; font-weight:bold; text-align:center;
+}
+
+/*サブメニューのボディ部分（余白調整・背景画像・背景色）*/
+ul#nishigawa_naka {
+	padding-bottom:6px;
+	background-repeat:no-repeat; background-position:bottom;
+	background-color:#75715E;
+}
+ul#nishigawa_naka li {
+	font-size:90%;			/*文字サイズを90%にする*/
+	list-style-type:none;		/*リストマーカー無しにする*/
+	display:inline;			/*リスト項目をインライン表示にする*/
+}
+ul#nishigawa_naka li a {
+	display:block;			/*リンクをブロック表示にする*/
+	/*margin:0px 4px 0px 4px;		/*サブメニュー項目のマージン*/
+	/*padding:2px 0px 2px 20px;	/*サブメニュー項目のパディング*/
+	background-color:#272822;	/*サブメニュー項目の背景色*/
+	text-decoration:none;		/*リンクの下線を無くす*/
+}
+ul#nishigawa_naka li a:hover {
+	background-color:#75715E;	/*リンクにマウスが乗ったら色を変える*/
+}
+
+/*============================================
+コンテンツ（中央と右の2カラム全体）
+============================================*/
+div#chuuou {
+	width:100%; /*margin:10px 20px 10px 0px;	幅の指定と位置調整*/
+	float:left;				/*2カラム全体を右寄せにする*/
+}
+
+/*============================================
+ニュース（中央カラム）
+============================================*/
+/*div#nakami {
+	width:80%; margin-right:5px; padding-top:10px; /*幅の指定と位置調整
+	float:left;					/*カラムを左寄せにする
+	background-repeat:no-repeat;			/*背景画像を繰り返さない
+}*/
+
+/*見出し・段落・水平線のスタイル指定*/
+h2 {
+	font-size:100%; margin-bottom:10px; padding-left:25px;
+	font-size:95%; border-bottom:solid 1px #db6722;
+	background-repeat:no-repeat; background-position:left center;
+}
+h3 {font-size:90%; margin-left:5px;}
+p {font-size:90%; margin:10px 0px 10px 10px; text-indent:10px;}
+hr {height:1px; border:solid 2.5px #db6722; margin-bottom:30px;}
+
+/*============================================
+ピックアップ（右カラム）
+============================================*/
+div#hirou {
+	width:150px; padding-top:10px; 		/*幅の指定と位置調整*/
+	float:right;				/*カラムを右寄せにする*/
+	background-image:url("images/bar_pickup.gif");	/*右カラムの背景画像*/
+}
+div#hirou ul {
+	margin-left:10px; 		/*左マージンを10px空ける*/
+	font-size:90%;			/*フォントサイズを90%にする*/
+}
+div#hirou li {
+	list-style-type:none; 		/*リストマーカー無しにする*/
+	line-height:1.8;		/*行の高さを1.8倍にする*/
+}
+
+/*============================================
+フッタ
+============================================*/
+
+#pagetop {
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+}
+
+/*@media screen and (min-width: 1280px) and (max-width: 1366px)*/
+
+
+/*--common----------------------------------------------------------*/
+
+/*h1,
+h2,
+#chuuou h3,
+p,
+#chuuou p,
+footer p {
+	padding: 10px;
+}*/
+
+
+div#zentai, div#kitagawa, input[type=text], input[type=number], input[type=submit], input[type=reset],input[type=password], input[type=email] ,select
+{
+	-webkit-appearance: none;
+	background-color:#272822;
+	color:#04B0C5;
+}
+
+.container
+{
+	color:#04B0C5;
+	width:90%; margin:0 auto;
+	background-color:#272822;
+}
+
+.container a
+{
+	color:#db6722
+}
+
+/*input[type="text"],input[type=password] {
+width: 80px;
+}*/
+
+div#chuuou
+{
+	background-color: #3E3D32;
+	border-top:solid 5px #db6722;
+}
+
+h4, h5
+{
+	padding-left: 10px
+}
+
+h1, h2, h3, h4, h5
+{
+		border-bottom:solid 1px #db6722;
+}
+
+
+tr
+{
+	background:#272822;
+}
+
+.odd
+{
+	background:#000000;
+}
+
+td
+{
+	padding: 5px;
+	color: #ffffff;
+}
+
+th
+{
+	font-size: 120%
+}
+
+#mae, #tsugi, #saisho, #saigo, #maes, #tsugis, #saishos, #saigos {
+  color: #db6722;
+  cursor: pointer;
+}
+
+#mnPg, #mnPgs
+{
+	word-wrap: break-word;
+}
+
+a.henshuulink
+{
+	color: #04B0C5
+}
+
+u
+{
+	cursor: pointer
+}
+
+/*============================================
+フッタ
+============================================*/
+#saikabu {
+	height:42px; text-align:center;
+	clear:both;	/*回り込みを解除する*/
+	background-color:#272822;			/*フッタ部分の背景色*/
+}
+address {
+	font-style:normal;			 /*フォントスタイルを標準にする*/
+	font-size:small;			 /*フォントサイズを小さくする*/
+	padding:5px 0px 5px 0px;		 /*要素内容の位置調整*/
+}
+
+.subFieldSet
+{
+	width: 15%
+}
+
+tr.hv td {
+	background-color: #f0e68c;
+    color:#000000;
+}
