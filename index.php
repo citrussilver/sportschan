@@ -20,11 +20,6 @@ if (!is_user()) {
     <title>スポーツちゃん</title>
     <link rel="stylesheet" href="css/shiki.css"/>
     <link rel="stylesheet" href="css/dark-hive/jquery-ui-1.10.4.custom.min.css"/>
-    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
-    <script type="text/javascript" src="js/jvs.js"></script>
-    <link href="css/style_sp.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
-    <link href="css/style_pad.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)">
 </head>
  
 <body>
